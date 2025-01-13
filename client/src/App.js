@@ -7,7 +7,12 @@ const App = ()=>{
         
            <div className="bg" >
             <div>
+
             <h1>Memories feature 1</h1>
+
+            <h1>Memories</h1>
+            <h2>FEATURE 22222</h2>
+
             </div>
             
             
