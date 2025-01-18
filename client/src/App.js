@@ -1,7 +1,7 @@
 import React from "react";
 //
 //import memories from './images/267434.jpg';
-import './App.css'
+import './App.css'u
 const App = ()=>{
     return(
         
