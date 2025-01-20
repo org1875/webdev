@@ -25,6 +25,7 @@ jobs:
     - name: Create new branch
       run: |
         git checkout -b ${{ github.event.inputs.name }}
+        git push origin ${{ github.event.inputs.name }}
 
     - name: Create 'new' directory
       run: |
@@ -32,6 +33,6 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git add new
+        git add .
         git commit -m "Create 'new' directory in branch ${{ github.event.inputs.name }}"
         git push origin ${{ github.event.inputs.name }}
