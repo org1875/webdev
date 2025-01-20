@@ -31,6 +31,8 @@ jobs:
       run: |
         mkdir -p new
         ls -l  # List files to verify the 'new' directory exists
+        touch new/newfile.txt
+        echo "This is a new file created by GitHub Actions!" > new/newfile.txt
         git status  # Show status to check if the 'new' directory is detected
 
     - name: Commit and push changes
