@@ -1,0 +1,31 @@
+name: Create Branch and Directory
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'The name of the new branch'
+        required: true
+        type: string
+
+jobs:
+  create-branch-and-directory:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create new branch
+      run: |
+        git checkout -b ${{ github.event.inputs.name }}
+
+    - name: Create 'new' directory
+      run: |
+        mkdir new
+
+    - name: Commit and push changes
+      run: |
+        git add new
+        git commit -m "Create 'new' directory in branch ${{ github.event.inputs.name }}"
+        git push origin ${{ github.event.inputs.name }}
