@@ -8,6 +8,9 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write  # Allow the workflow to push changes to the repository
+
 jobs:
   create-branch-and-directory:
     runs-on: ubuntu-latest
