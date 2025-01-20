@@ -29,7 +29,9 @@ jobs:
 
     - name: Create 'new' directory
       run: |
-        mkdir new
+        mkdir -p new
+        ls -l  # List files to verify the 'new' directory exists
+        git status  # Show status to check if the 'new' directory is detected
 
     - name: Commit and push changes
       run: |
